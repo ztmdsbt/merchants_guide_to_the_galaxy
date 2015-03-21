@@ -11,12 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321155255) do
+ActiveRecord::Schema.define(version: 20150321161821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "language_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "product_prices", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "language_type_id"
+    t.decimal  "price"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "product_prices", ["language_type_id"], name: "index_product_prices_on_language_type_id", using: :btree
+  add_index "product_prices", ["product_id"], name: "index_product_prices_on_product_id", using: :btree
+
+  create_table "products", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,5 +50,26 @@ ActiveRecord::Schema.define(version: 20150321155255) do
 
   add_index "rome_symbols", ["language_type_id"], name: "index_rome_symbols_on_language_type_id", using: :btree
 
+  create_table "unit_values", force: :cascade do |t|
+    t.integer  "unit_id"
+    t.integer  "language_type_id"
+    t.decimal  "value"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "unit_values", ["language_type_id"], name: "index_unit_values_on_language_type_id", using: :btree
+  add_index "unit_values", ["unit_id"], name: "index_unit_values_on_unit_id", using: :btree
+
+  create_table "units", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "product_prices", "language_types"
+  add_foreign_key "product_prices", "products"
   add_foreign_key "rome_symbols", "language_types"
+  add_foreign_key "unit_values", "language_types"
+  add_foreign_key "unit_values", "units"
 end
