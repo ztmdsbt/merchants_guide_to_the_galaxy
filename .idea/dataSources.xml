@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4218926030">
+    <data-source source="LOCAL" name="Rails merchants_guide_to_the_galaxy: development" uuid="013c72c1-ee66-4cd6-9284-b6600fa79e58">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:merchants_guide_to_the_galaxy_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails merchants_guide_to_the_galaxy: test" uuid="cb492295-a782-42cf-b187-2ddf4b5139e1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:merchants_guide_to_the_galaxy_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails merchants_guide_to_the_galaxy: production" uuid="42740e61-603c-49b1-930b-e6df4001f744">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:merchants_guide_to_the_galaxy_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
