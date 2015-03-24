@@ -14,8 +14,9 @@
 #  index_symbol_correspondings_on_rome_symbol_id    (rome_symbol_id)
 #
 
-require 'rails_helper'
+FactoryGirl.define do
+  factory :symbol_corresponding do
+    
+  end
 
-RSpec.describe SymbolCorresponding, type: :model do
-#  pending "add some examples to (or delete) #{__FILE__}"
 end
