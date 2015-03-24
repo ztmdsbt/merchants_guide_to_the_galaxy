@@ -10,7 +10,7 @@
 
 FactoryGirl.define do
   factory :language_type do
-    
+    name  {'Galaxy'}
   end
 
 end

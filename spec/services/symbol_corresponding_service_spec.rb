@@ -1,18 +1,19 @@
 require 'rails_helper'
 
-describe SymbolCorrespondingSerivce do
+describe SymbolCorrespondingService do
 
-  let(:language_symbol_id) { 1 }
-  let(:rome_symbol_id) { 1 }
+  let(:language_symbol_id) { LanguageSymbol.first.id }
+  let(:rome_symbol_id) { RomeSymbol.first.id }
 
-  subject { SymbolCorrespondingSerivce.new }
+  subject { SymbolCorrespondingService.new }
 
   before do
-    # FactoryGirl.create()
+    FactoryGirl.create(:language_symbol)
   end
 
   it 'should Created a [Rome symbol <==> Language symbol] corresponding' do
     expect { subject.create_symbol_corresponding(language_symbol_id, rome_symbol_id) }
         .to change { SymbolCorresponding.count }.from(0).to(1)
+
   end
 end

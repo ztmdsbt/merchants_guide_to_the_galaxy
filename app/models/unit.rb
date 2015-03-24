@@ -9,4 +9,5 @@
 #
 
 class Unit < ActiveRecord::Base
+  has_many :unit_values
 end

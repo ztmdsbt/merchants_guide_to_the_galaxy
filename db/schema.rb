@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150324052730) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,13 +57,12 @@ ActiveRecord::Schema.define(version: 0) do
   end
 
   create_table "symbol_correspondings", force: :cascade do |t|
-    t.integer  "language_type_id"
     t.integer  "rome_symbol_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "language_symbol_id"
   end
 
-  add_index "symbol_correspondings", ["language_type_id"], name: "index_symbol_correspondings_on_language_type_id", using: :btree
   add_index "symbol_correspondings", ["rome_symbol_id"], name: "index_symbol_correspondings_on_rome_symbol_id", using: :btree
 
   create_table "unit_values", force: :cascade do |t|
@@ -86,7 +85,7 @@ ActiveRecord::Schema.define(version: 0) do
   add_foreign_key "language_symbols", "language_types"
   add_foreign_key "product_prices", "language_types"
   add_foreign_key "product_prices", "products"
-  add_foreign_key "symbol_correspondings", "language_types"
+  add_foreign_key "symbol_correspondings", "language_symbols"
   add_foreign_key "symbol_correspondings", "rome_symbols"
   add_foreign_key "unit_values", "language_types"
   add_foreign_key "unit_values", "units"
