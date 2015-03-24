@@ -15,8 +15,8 @@
 
 FactoryGirl.define do
   factory :language_symbol do
-    language_type_id  {FactoryGirl.create(:language_type).id}
-    name              {"brok"}
-  end
 
+    name { Faker::Lorem.words(1) }
+    association :language_type_id, factory: :language_type
+  end
 end

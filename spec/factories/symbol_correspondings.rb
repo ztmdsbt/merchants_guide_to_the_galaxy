@@ -15,7 +15,6 @@
 
 FactoryGirl.define do
   factory :symbol_corresponding do
-    
-  end
 
+  end
 end

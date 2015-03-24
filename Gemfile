@@ -38,6 +38,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'annotate'
+  gem 'faker'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'cane'
   gem 'rubocop'

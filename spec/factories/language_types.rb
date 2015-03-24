@@ -10,7 +10,7 @@
 
 FactoryGirl.define do
   factory :language_type do
-    name  {'Galaxy'}
+    initialize_with { LanguageType.find_or_create_by(name: 'Galaxy') }
   end
 
 end
