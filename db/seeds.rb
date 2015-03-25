@@ -22,3 +22,6 @@ RomeSymbol.create!([
                        {name: 'CM', value: 900},
                        {name: 'M', value: 1000}
                    ])
+
+LanguageType.delete_all
+LanguageType.create(name: 'Galaxy')

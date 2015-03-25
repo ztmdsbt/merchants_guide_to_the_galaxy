@@ -12,3 +12,6 @@
 !/log/.keep
 /tmp
 /.idea
+/.DS_Store
+/spec/.DS_Store
+/spec/models/.DS_Store

@@ -17,4 +17,16 @@ require 'rails_helper'
 
 RSpec.describe SymbolCorresponding, type: :model do
 #  pending "add some examples to (or delete) #{__FILE__}"
+
+  subject { SymbolCorresponding.new }
+
+  before do
+    language_symbol_first = FactoryGirl.create(:language_symbol, name: 'prok')
+    language_symbol_second = FactoryGirl.create(:language_symbol, name: 'hjkw')
+    language_symbol_third = FactoryGirl.create(:language_symbol, name: 'lkcj')
+
+
+    FactoryGirl.create(:symbol_corresponding)
+  end
+
 end
