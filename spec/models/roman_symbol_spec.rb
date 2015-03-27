@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: rome_symbols
+# Table name: roman_symbols
 #
 #  id          :integer          not null, primary key
 #  name        :string
@@ -12,15 +12,15 @@
 
 require 'rails_helper'
 
-RSpec.describe RomeSymbol, type: :model do
+RSpec.describe RomanSymbol, type: :model do
 
   context '#singlton_symbols' do
-    subject { RomeSymbol.singleton_symbols.first.name.length }
+    subject { RomanSymbol.singleton_symbols.first.name.length }
     it { is_expected.to eq 1 }
   end
 
   context '#combined_symbols' do
-    subject { RomeSymbol.combined_symbols.first.name.length }
+    subject { RomanSymbol.combined_symbols.first.name.length }
     it { is_expected.to eq 2 }
   end
 end

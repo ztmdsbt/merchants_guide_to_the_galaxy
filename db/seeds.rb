@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-RomeSymbol.delete_all
-RomeSymbol.create!([
+RomanSymbol.delete_all
+RomanSymbol.create!([
                        {name: 'I', value: 1},
                        {name: 'IV', value: 4},
                        {name: 'V', value: 5},

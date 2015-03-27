@@ -2,14 +2,15 @@ class SymbolConvertService
   def convert_symbol_to_rome(symbol_string, language_type_name = 'Galaxy')
     symbol_array = symbol_string.split(' ')
     language_type_id = get_language_type_id(language_type_name)
-    symbol_array.map do |symbol|
-      get_symbol_corresponding(language_type_id, symbol).rome_symbol.name
+    roman_string = symbol_array.map do |symbol|
+      get_symbol_corresponding(language_type_id, symbol).roman_symbol.name
     end.join()
+    validate_rome(roman_string)
   end
 
   private
-  def validate_rome(rome_string)
-
+  def validate_rome(roman_string)
+    roman_string
   end
 
   def get_language_type_id(language_type_name)

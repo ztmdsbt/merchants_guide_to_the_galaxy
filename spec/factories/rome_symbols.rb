@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: rome_symbols
+# Table name: roman_symbols
 #
 #  id          :integer          not null, primary key
 #  name        :string
@@ -11,7 +11,7 @@
 #
 
 FactoryGirl.define do
-  factory :rome_symbol do
+  factory :roman_symbol do
     
   end
 

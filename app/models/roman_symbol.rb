@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: rome_symbols
+# Table name: roman_symbols
 #
 #  id          :integer          not null, primary key
 #  name        :string
@@ -10,7 +10,7 @@
 #  updated_at  :datetime         not null
 #
 
-class RomeSymbol < ActiveRecord::Base
+class RomanSymbol < ActiveRecord::Base
   def self.singleton_symbols
     where("LENGTH(name) = ?", 1)
   end

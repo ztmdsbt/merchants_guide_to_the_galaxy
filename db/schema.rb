@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20150324052730) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "rome_symbols", force: :cascade do |t|
+  create_table "roman_symbols", force: :cascade do |t|
     t.string   "name"
     t.integer  "value"
     t.string   "description"
@@ -57,13 +57,13 @@ ActiveRecord::Schema.define(version: 20150324052730) do
   end
 
   create_table "symbol_correspondings", force: :cascade do |t|
-    t.integer  "rome_symbol_id"
+    t.integer  "roman_symbol_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.integer  "language_symbol_id"
   end
 
-  add_index "symbol_correspondings", ["rome_symbol_id"], name: "index_symbol_correspondings_on_rome_symbol_id", using: :btree
+  add_index "symbol_correspondings", ["roman_symbol_id"], name: "index_symbol_correspondings_on_roman_symbol_id", using: :btree
 
   create_table "unit_values", force: :cascade do |t|
     t.integer  "unit_id"
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20150324052730) do
   add_foreign_key "product_prices", "language_types"
   add_foreign_key "product_prices", "products"
   add_foreign_key "symbol_correspondings", "language_symbols"
-  add_foreign_key "symbol_correspondings", "rome_symbols"
+  add_foreign_key "symbol_correspondings", "roman_symbols"
   add_foreign_key "unit_values", "language_types"
   add_foreign_key "unit_values", "units"
 end
