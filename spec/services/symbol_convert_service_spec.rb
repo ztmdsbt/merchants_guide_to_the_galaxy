@@ -13,13 +13,13 @@ describe SymbolConvertService do
     before do
       FactoryGirl.create(:symbol_corresponding,
                          language_symbol_id: language_symbol_third.id,
-                         rome_symbol_id: RomeSymbol.first.id)
+                         rome_symbol_id: RomeSymbol.singleton_symbols.first.id)
       FactoryGirl.create(:symbol_corresponding,
                          language_symbol_id: language_symbol_second.id,
-                         rome_symbol_id: RomeSymbol.second.id)
+                         rome_symbol_id: RomeSymbol.singleton_symbols.second.id)
       FactoryGirl.create(:symbol_corresponding,
                          language_symbol_id: language_symbol_first.id,
-                         rome_symbol_id: RomeSymbol.third.id)
+                         rome_symbol_id: RomeSymbol.singleton_symbols.third.id)
     end
 
     it { is_expected.to eq "XVI" }

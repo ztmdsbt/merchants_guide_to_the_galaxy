@@ -3,8 +3,13 @@ class SymbolConvertService
     symbol_array = symbol_string.split(' ')
     language_type_id = get_language_type_id(language_type_name)
     symbol_array.map do |symbol|
-      get_symbol_corresponding(language_type_id, symbol).rome_symbol
-    end.join(' ')
+      get_symbol_corresponding(language_type_id, symbol).rome_symbol.name
+    end.join()
+  end
+
+  private
+  def validate_rome(rome_string)
+
   end
 
   def get_language_type_id(language_type_name)

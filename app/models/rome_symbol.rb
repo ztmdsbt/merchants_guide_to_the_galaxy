@@ -11,4 +11,11 @@
 #
 
 class RomeSymbol < ActiveRecord::Base
+  def self.singleton_symbols
+    where("LENGTH(name) = ?", 1)
+  end
+
+  def self.combined_symbols
+    where("LENGTH(name) = ?", 2)
+  end
 end

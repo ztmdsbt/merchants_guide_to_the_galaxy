@@ -16,4 +16,8 @@
 class SymbolCorresponding < ActiveRecord::Base
   belongs_to :language_symbol
   belongs_to :rome_symbol
+
+  def self.find_by_language_symbol(language_symbol)
+    self.find_by(language_symbol_id: language_symbol.id)
+  end
 end

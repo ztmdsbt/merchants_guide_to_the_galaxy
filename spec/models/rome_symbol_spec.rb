@@ -13,5 +13,14 @@
 require 'rails_helper'
 
 RSpec.describe RomeSymbol, type: :model do
-  # pending "add some examples to (or delete) #{__FILE__}"
+
+  context '#singlton_symbols' do
+    subject { RomeSymbol.singleton_symbols.first.name.length }
+    it { is_expected.to eq 1 }
+  end
+
+  context '#combined_symbols' do
+    subject { RomeSymbol.combined_symbols.first.name.length }
+    it { is_expected.to eq 2 }
+  end
 end
