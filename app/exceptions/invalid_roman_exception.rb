@@ -1,0 +1,2 @@
+class InvalidRomanException < Exception
+end

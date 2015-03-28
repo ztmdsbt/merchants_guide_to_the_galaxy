@@ -29,6 +29,34 @@ describe SymbolConvertService do
   context 'validate input string validity.' do
     let(:galaxy_string) { "brok link hash" }
 
-    it { expect { subject }.to raise_error }
+    it 'D, L, or V may each only appear at most one time in the string.' do
+
+    end
+
+    it 'M, C, X, or I may appear no more that three times consecutively in the string.' do
+
+    end
+
+    it 'Symbols values from left to right, from biggest to smallest.' do
+
+    end
+
+    it 'Only C, X or I mey appear one time at the left site of a bigger symbol.' do
+
+    end
+
+    it '' do
+
+    end
+
+    it '' do
+
+    end
+
+    it '' do
+
+    end
+
+    it { expect { subject }.to raise_error InvalidRomanException }
   end
 end
