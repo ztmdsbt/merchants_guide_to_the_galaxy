@@ -79,7 +79,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: ec2-54-163-238-96.compute-1.amazonaws.com
+  <<: *default
+  host: ec2-54-163-238-96.compute-1.amazonaws.com
   database: dd1cm4h5n5clp0
   username: fzpvygxnvcjobe
   password: uQLyuM0Ec7w3j6Fgb6-so1ZZ-_
