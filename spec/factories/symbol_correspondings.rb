@@ -3,7 +3,7 @@
 # Table name: symbol_correspondings
 #
 #  id                 :integer          not null, primary key
-#  roman_symbol_id     :integer
+#  roman_symbol_id    :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  language_symbol_id :integer

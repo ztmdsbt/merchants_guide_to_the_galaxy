@@ -79,7 +79,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: merchants_guide_to_the_galaxy_production
-  username: merchants_guide_to_the_galaxy
-  password: <%= ENV['MERCHANTS_GUIDE_TO_THE_GALAXY_DATABASE_PASSWORD'] %>
+  <<: ec2-54-163-238-96.compute-1.amazonaws.com
+  database: dd1cm4h5n5clp0
+  username: fzpvygxnvcjobe
+  password: uQLyuM0Ec7w3j6Fgb6-so1ZZ-_
